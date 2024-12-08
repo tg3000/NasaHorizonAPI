@@ -38,7 +38,7 @@ def create_request_file(target_body: str, center_body: str, start_time: str, end
     command += "!$$EOF"
     return io.StringIO(command)
 
-def prep_output(output: str) -> str:
+def prep_output(output: str):
     output = output.split("$$SOE")[1]
     output = output.split("$$EOE")[0]
     output = output.split("\n")
